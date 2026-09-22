@@ -4,6 +4,11 @@ export const metadata = {
   title: "كوا — KOWA | منصة النقل والخدمات اللوجستية الذكية",
   description:
     "تنقّل بسهولة وأمان في جميع أنحاء المملكة مع منصة كوا الذكية للخدمات اللوجستية والنقل.",
+  icons: {
+    icon: "/logo-fav.png",
+    shortcut: "/logo-fav.png",
+    apple: "/logo-fav.png",
+  },
   openGraph: {
     title: "كوا — KOWA | منصة النقل والخدمات اللوجستية الذكية",
     description:
