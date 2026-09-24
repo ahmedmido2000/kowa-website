@@ -61,7 +61,9 @@ export default function Footer() {
               
               {/* X (Twitter) Icon */}
               <a
-                href="#"
+                href="https://x.com/kowa_sa"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="X (Twitter)"
                 className="w-[24px] h-[24px] flex items-center justify-center text-[#E1E3E4] hover:text-[#F5A623] transition-colors"
               >
@@ -75,7 +77,9 @@ export default function Footer() {
 
               {/* TikTok Icon */}
               <a
-                href="#"
+                href="https://www.tiktok.com/@kowa.sa"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="TikTok"
                 className="w-[24px] h-[24px] flex items-center justify-center text-[#E1E3E4] hover:text-[#F5A623] transition-colors"
               >
@@ -87,9 +91,11 @@ export default function Footer() {
                 </svg>
               </a>
 
-               {/* Snapchat Icon */}
+              {/* Snapchat Icon */}
               <a
-                href="#"
+                href="https://www.snapchat.com/add/kowa.sa"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Snapchat"
                 className="w-[24px] h-[24px] flex items-center justify-center text-[#E1E3E4] hover:text-[#F5A623] transition-colors"
               >
