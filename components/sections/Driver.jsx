@@ -82,8 +82,10 @@ export default function Driver() {
           <div className="relative w-full ">
             <div className="relative w-full overflow-hidden border-2 border-[#1C0D7C] rounded-[24px] shadow-2xl">
               <img
-                src="/driver.png"
-                alt="كابتن كوا - انضم إلينا"
+                src="/driver.webp"
+                alt="انضم ككابتن محترف في منصة كوا"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto object-cover min-h-[380px] lg:min-h-[400px]"
               />
 

@@ -10,7 +10,7 @@ export default function Hero() {
         id="hero"
         className="relative w-full pt-28 pb-20 lg:pt-36 lg:pb-28 flex flex-col justify-between overflow-visible"
         style={{
-          backgroundImage: "url('/hero-bg.png')",
+          backgroundImage: "url('/hero-bg.webp')",
           backgroundSize: "cover",
           backgroundPosition: "left center !important",
           backgroundRepeat: "no-repeat",
@@ -96,8 +96,12 @@ export default function Hero() {
             <div className="lg:col-span-5 flex justify-center items-center">
               <div className="relative w-full max-w-[580px] lg:max-w-[640px]">
                 <img
-                  src="/hero-side-image.png"
-                  alt="كوا - التنقل الذكي"
+                  src="/hero-side-image.webp"
+                  alt="كوا - المنصة الوطنية الرائدة للتنقل الذكي الفاخر بالمملكة"
+                  width={640}
+                  height={520}
+                  loading="eager"
+                  fetchPriority="high"
                   className="w-full h-auto object-contain drop-shadow-2xl transition-transform duration-700 hover:scale-[1.02]"
                 />
               </div>

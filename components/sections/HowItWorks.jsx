@@ -43,14 +43,18 @@ export default function HowItWorks() {
           {/* Right Image Illustration (City Skyline with loop road) */}
           <img
             src="/steps-1.png"
-            alt="خطوات التنقل الذكي"
+            alt="خطوات التنقل الذكي مع كوا"
+            loading="lazy"
+            decoding="async"
             className="hidden lg:block absolute -right-[60px] bottom-0 max-w-[380px] xl:max-w-[440px] h-auto object-contain object-bottom pointer-events-none"
           />
 
           {/* Left Image Illustration (3D Pin with road & car) */}
           <img
-            src="/steps-2.png"
-            alt="وجهتك مع كوا"
+            src="/steps-2.webp"
+            alt="اختر وجهتك بسهولة مع كوا"
+            loading="lazy"
+            decoding="async"
             className="hidden lg:block absolute -left-[60px] bottom-0 max-w-[340px] xl:max-w-[400px] h-auto object-contain object-bottom pointer-events-none"
           />
 

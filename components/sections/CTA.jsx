@@ -6,7 +6,7 @@ export default function CTA() {
       id="cta"
       className="relative w-full py-[95px] px-4 sm:px-8 lg:px-[120px] overflow-hidden flex flex-col items-center justify-center text-center"
       style={{
-        backgroundImage: "url('/cta-bg.png')",
+        backgroundImage: "url('/cta-bg.webp')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

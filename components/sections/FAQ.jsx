@@ -73,6 +73,8 @@ export default function FAQ() {
                     <button
                       type="button"
                       onClick={() => toggleFaq(item.id)}
+                      aria-expanded={isOpen}
+                      aria-controls={`faq-answer-${item.id}`}
                       className="w-full flex items-center justify-between gap-4 text-right focus:outline-none group"
                     >
                       {/* Question Title (Right side in RTL) */}
@@ -95,7 +97,7 @@ export default function FAQ() {
 
                     {/* Card Body / Answer Paragraph (when open) */}
                     {isOpen && (
-                      <div className="pt-3 animate-fadeIn">
+                      <div id={`faq-answer-${item.id}`} className="pt-3 animate-fadeIn">
                         <p className="text-[15px] sm:text-[16px] font-normal text-black leading-[1.7]">
                           {item.answer}
                         </p>
@@ -112,8 +114,10 @@ export default function FAQ() {
           <div className="flex justify-center items-center order-2 lg:order-2 w-full">
             <div className="relative w-full max-w-[440px] lg:max-w-[480px]">
               <img
-                src="/faq-phone.png"
-                alt="تطبيق كوا - الأسئلة الشائعة"
+                src="/faq-phone.webp"
+                alt="تطبيق كوا على الجوال - الأسئلة الشائعة"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto object-contain drop-shadow-2xl transition-transform duration-500 hover:scale-[1.02]"
               />
             </div>

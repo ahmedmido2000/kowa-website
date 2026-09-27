@@ -55,8 +55,10 @@ export default function Passengers() {
               }}
             >
               <img
-                src="/passenger.png"
-                alt="تجربة الركاب - كوا"
+                src="/passenger.webp"
+                alt="تجربة الركاب الفاخرة النخبة في منصة كوا"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto object-cover min-h-[420px] lg:min-h-[520px]"
               />
 
