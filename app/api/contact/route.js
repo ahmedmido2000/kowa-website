@@ -45,12 +45,12 @@ export async function POST(request) {
     const cleanMessage = message.trim();
 
     // Send email via Resend
-    // Note: Resend onboarding uses onboarding@resend.dev as default sender
-    const emailData = await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: "منصة كوا للتنقل الذكي <onboarding@resend.dev>",
       to: ["support@kowa.sa"],
-      reply_to: cleanEmail,
+      replyTo: cleanEmail,
       subject: `[رسالة جديدة من الموقع] - ${cleanSubject} (${cleanName})`,
+      text: `اسم ارسل الرسالة: ${cleanName}\nالبريد: ${cleanEmail}\nالجوال: ${cleanPhone}\nالموضوع: ${cleanSubject}\nالرسالة:\n${cleanMessage}`,
       html: `
         <div dir="rtl" style="font-family: Arial, sans-serif; background-color: #f8f7fd; padding: 30px; color: #0c0828;">
           <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 16px; padding: 24px; border: 1px solid #e5e2f6; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
@@ -97,22 +97,22 @@ export async function POST(request) {
       `,
     });
 
-    if (emailData.error) {
-      console.error("Resend API Error:", emailData.error);
+    if (error) {
+      console.error("Resend API Error details:", error);
       return NextResponse.json(
-        { error: emailData.error.message || "حدث خطأ أثناء إرسال البريد الإلكتروني" },
-        { status: 500 }
+        { error: error.message || "حدث خطأ أثناء إرسال البريد الإلكتروني" },
+        { status: 400 }
       );
     }
 
     return NextResponse.json(
-      { success: true, message: "تم إرسال رسالتك بنجاح! سيتواصل معك فريقنا في أقرب وقت." },
+      { success: true, data, message: "تم إرسال رسالتك بنجاح! سيتواصل معك فريقنا في أقرب وقت." },
       { status: 200 }
     );
   } catch (error) {
     console.error("Contact Form Server Error:", error);
     return NextResponse.json(
-      { error: "حدث خطأ غير متوقع في الخادم، يرجى المحاولة لاحقاً." },
+      { error: error.message || "حدث خطأ غير متوقع في الخادم، يرجى المحاولة لاحقاً." },
       { status: 500 }
     );
   }
