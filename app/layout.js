@@ -45,7 +45,7 @@ export const metadata = {
     siteName: "كوا KOWA Mobility",
     images: [
       {
-        url: "/hero-side-image.png",
+        url: "/hero-side-image.webp",
         width: 1200,
         height: 630,
         alt: "منصة كوا للتنقل الذكي والفاخر",
@@ -59,7 +59,7 @@ export const metadata = {
     title: "كوا — KOWA | منصة النقل والخدمات اللوجستية الذكية في السعودية",
     description:
       "تنقّل بسهولة وأمان في جميع أنحاء المملكة مع منصة كوا الذكية للخدمات اللوجستية والنقل الفاخر.",
-    images: ["/hero-side-image.png"],
+    images: ["/hero-side-image.webp"],
   },
 };
 
